@@ -37,7 +37,7 @@ jobs:
       run: |
         bld() { cabal build pkg:text:tests; }
         bld || bld || bld
-        cabal test
+        cabal test --test-show-details=streaming
     - name: Haddock
       run: cabal haddock
     - name: SDist
